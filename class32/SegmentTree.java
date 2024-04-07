@@ -107,6 +107,9 @@ public class SegmentTree {
             sum[rt] = sum[rt << 1] + sum[rt << 1 | 1];
         }
 
+        //L-R:小区间段
+        //l-r:整个区间段
+        //rt:根节点
         public static long quary(int L, int R, int l, int r, int rt) {
             if (L <= l && r <= R) {
                 return sum[rt];
@@ -241,13 +244,3 @@ public class SegmentTree {
 
 
 //线段树的适用范围：不用调研左边与右边的具体细节，左边与右边的信息直接拿来用就行O(1)
-
-
-
-
-
-
-
-
-
-
